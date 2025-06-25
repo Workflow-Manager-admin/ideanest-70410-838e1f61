@@ -1,3 +1,4 @@
+/* global window */
 /**
  * PUBLIC_INTERFACE
  * Loads notes from localStorage. Returns [] on failure or if localStorage is unavailable.
@@ -8,7 +9,7 @@ export function loadNotes() {
       const raw = window.localStorage.getItem("idea-vault-notes");
       return raw ? JSON.parse(raw) : [];
     }
-  } catch (err) {
+  } catch {
     // Fail gracefully
   }
   return [];
@@ -23,7 +24,7 @@ export function saveNotes(notes) {
     if (typeof window !== "undefined" && window.localStorage) {
       window.localStorage.setItem("idea-vault-notes", JSON.stringify(notes));
     }
-  } catch (err) {
+  } catch {
     // Fail gracefully
   }
 }

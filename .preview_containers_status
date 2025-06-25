@@ -1,1 +1,1 @@
-{"frontend_spa": {"status": "failed", "timestamp": "2025-06-25T06:22:42.138908", "url": "https://vscode-internal-023-beta.beta01.cloud.kavia.ai:3000/preview.html", "api_route": "", "error": "Failed to install dependencies"}}
+{"frontend_spa": {"status": "building", "timestamp": "2025-06-25T06:28:16.955064", "url": null, "api_route": null, "error": "Failed to install dependencies"}}
