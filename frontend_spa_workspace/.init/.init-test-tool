@@ -1,0 +1,4 @@
+{
+    "command": "npm run build",
+    "working_directory": "/home/kavia/workspace/code-generation/ideanest-70410-838e1f61/frontend_spa_workspace/frontend_spa"
+}

@@ -1,0 +1,81 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #64748b;
+  --accent: #fbbf24;
+  --primary-bg: #f8fafc;
+  --secondary-bg: #f1f5f9;
+  --accent-bg: #fef08a;
+  --surface-bg: #ffffff;
+  --on-surface: #22292f;
+  --on-accent: #fff;
+  --input-bg: #f2f4f7;
+}
+[data-theme="dark"] {
+  --primary: #60a5fa;
+  --secondary: #a8a29e;
+  --accent: #fbbf24;
+  --primary-bg: #18181b;
+  --secondary-bg: #232326;
+  --accent-bg: #594400;
+  --surface-bg: #242427;
+  --on-surface: #ececec;
+  --on-accent: #000;
+  --input-bg: #222032;
+}
+
+body, .main-wrap {
+  background: var(--primary-bg);
+  color: var(--on-surface);
+}
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: stretch;
+}
+.note-form-area, .filter-bar-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.empty-state {
+  text-align: center;
+  margin-top: 5em;
+  color: var(--secondary);
+  font-size: 1.29em;
+  opacity: 0.83;
+  animation: fadeInEmpty 0.36s cubic-bezier(.68,.17,.99,.25);
+}
+@keyframes fadeInEmpty {
+  0% {opacity: 0;}
+  80% {opacity: 0;}
+  100% {opacity: 0.83;}
+}
+.empty-state span {
+  display: block;
+  margin-bottom: 0.7em;
+}
+@media (max-width: 900px) {
+  .note-list {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .main-header {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-bottom: 0.5em;
+  }
+}
+@media (max-width: 650px) {
+  .note-form, .filter-bar {
+    max-width: 97vw;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+  }
+  .main-header {
+    gap: 0.6rem;
+  }
+  .note-card {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
